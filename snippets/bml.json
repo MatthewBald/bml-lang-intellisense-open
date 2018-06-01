@@ -1,0 +1,82 @@
+[{
+    "For Loop": {
+        "prefix": "for",
+        "body": [
+            "for (${iterator} in ${collection}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Standard for loop"
+    },
+    "Indexed For Loop": {
+        "prefix": "forindex",
+        "body": [
+            "${index} = 0;",
+            "for (${each} in ${collection}) {",
+            "\t$0",
+            "\t${index} = ${index} + 1;",
+            "}"
+        ],
+        "description": "A for loop that increments an index each iteration."
+    },
+    "Indexed For Loop 2": {
+        "prefix": "index",
+        "body": [
+            "${index} = 0;",
+            "for (${each} in ${collection}) {",
+            "\t$0",
+            "\t${index} = ${index} + 1;",
+            "}"
+        ],
+        "description": "A for loop that increments an index each iteration."
+    },
+    "If": {
+        "prefix": "if",
+        "body": [
+            "if (${condition}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "An if statement"
+    },
+    "If...Else": {
+        "prefix": "if...else",
+        "body": [
+            "if (${condition}) {",
+            "\t$1",
+            "}",
+            "else {",
+            "\t$0",
+            "}"
+        ],
+        "description": "An if...else statement"
+    },
+    "If...Elif": {
+        "prefix": "if...elif",
+        "body": [
+            "if (${cond1}) {",
+            "\t$1",
+            "}",
+            "elif (${cond2}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "An if...elif statement"
+    },
+    "If...Elif...Else": {
+        "prefix": "if...elif...else",
+        "body": [
+            "if (${cond1}) {",
+            "\t$2",
+            "}",
+            "elif (${cond2}) {",
+            "\t$1",
+            "}",
+            "else {",
+            "\t$0",
+            "}"
+        ],
+        "description": "An if...else statement"
+    }
+    
+}]

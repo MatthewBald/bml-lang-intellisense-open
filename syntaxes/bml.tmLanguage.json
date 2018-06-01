@@ -1,0 +1,68 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "BigMachines Markup Language",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.bml",
+				"match": "\\b(if|elif|else|while|for|in|return|break|continue)\\b"
+			},
+			{
+				"name":"comment.line.bml",
+				"begin": "//+",
+				"end": "$"
+			},
+			{
+				"name": "comment.block.bml",
+				"begin": "/\\*",
+				"end": "\\*/"
+			},
+			{
+				"name": "constant.numeric.bml",
+				"match": "\\b(\\d+.|\\d+)\\b"
+			},
+			{
+				"name": "variable.language.bml",
+				"match": "(\\band\\b|\\bor\\b|\\bnot\\b|\\bAND\\b|\\bOR\\b|\\bNOT\\b|\\=|\\-|\\+|\\/|\\*|\\<|\\>|\\<\\=|\\>\\=|\\=\\=|\\<\\>)"
+			},
+			{
+				"name": "constant.language.bml",
+				"match": "\\b(true|false)\\b"
+			},
+			{
+				"name": "entity.name.function.bml",
+				"match": "util.|commerce."
+			},
+			{
+				"name": "variable.language.bml",
+				"match": "\\b(integer|Integer|float|Float|string|String|boolean|Boolean|date|Date|dict|Dict)\\b"
+			},
+			{
+				"name": "entity.name.function.bml",
+				"match": "\\b(SKUTriggerUtil|SKUlistSubParser|accountingFormat|addToDict|atof|acos|adddays|annualMaintClientException|annualMaintPromo|append|applytemplate|apprReasonConv|approvalCalc|approvalReasonsForGroup|approvalTool|arrayAtof|arrayAtoi|arrayFtoa|arrayItoa|asin|assetChecker|assetExemptions|assetListPrices|atan|atoi|bfqCalc|bm_attr_gen|bmql|buildQualifierDict|buildServicesPricingDict|buildTrainingPricingDict|buildTravelPricingDict|ceil|checkNull|combineHardware|compDates|comparedates|containskey|continarray|cos|cosh|createPartSortOrder|currentARRCalc|customAtof|customAtoi|customReplace|diffInMonths|ediTool|encodebase64|endswith|executeSOAPQuery|exp|expandBundleSkusString|fabs|fillDictArr|find|findinarray|findno|findnth|fmod|fsAtoi|formatascurrency|generateSOAPAddToTransactionQuery|generateSOAPRemoveFromTransactionQuery|generateSOAPUpdateAction|generateSOAPUpdateTransactionQuery|getAssetValues|getBandQty|getCurrentLineValue|getCustomerSpecificDicts|getDateFormat|getdate|getEDITiers|getFlatTierPricing|getFloatAttribute|getIntegerAttribute|getLongDate|getMasterStrings|getNotificationApprovalGroup|getNumberOfDaysForTermEnd|getSFDCInterfaces|getSFDCSessionID|getSpecDate|getStringAttribute|getTieredListPrice|getarrayattrstring|getboolean|getconfigattrvalue|getcurrencyvalue|getcurrenttimeinmillis|getdiffindays|getfloat|getint|getmessage|getoldvalue|getpartsdata|getreasonstatus|gettabledata|get|haserror|hl7implementation|hostedMigrations|hypot|iif|interopTierPricing|invoke|isempty|isleap|isnull|isnumber|isweekend|join|keys|left|len|likeForLike|ln|log|loginToName|logtime|lower|maintLvl|makeReturnDict|makeReturnString|makeSFDCURLArray|makeurlparam|mathEval|max|min|minusdays|pasysCalc|percentCoreAddonPricing|pow|productInclusions|promotionTool|putFloatAttribute|putIntegerAttribute|putStringAttribute|put|qqUtil|range|readxmlmultiple|readxmlsingle|recBundles|recommendAssets|recommendBasics|recommendBehaviorString|recommendBundleAsset|recommendHistory|recommendItems|recommendQualifiersQtys|recordset|replace|remove|returnHL7Flag|returnType|revLogParser|reverse|rollIntoRCMCalc|round|rpnParser|salesforceStringToJavaDate|serviceCheck|servicePricing|shippingFeeCalc|sin|sinh|sizeofarray|softError|sort|split|sqrt|startswith|stepTierPricingTool|strPad|stripAttr|strmatch|strtodate|strtojavadate|subscPricingTool|substring|sya|tableRowDict_func|tan|tanh|tierPricingCalc|tierPricingTool|tierStepTierCalc|transformxml|trim|updateRCM|upper|urldata|urldatabyget|urldatabypost|urldatabypostasync|userPermissions|values|legalAmendmentsUtil|mod_calcQuoteTotals|getBillingMilestones|legalDateChecker|arraysToReturnString|buildSKUQtyDict|mod_calcTopLevelValues|mod_buildBMQLDicts|mod_buildResultString|mod_lineProcessLoop)\\b"
+			}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.bml",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.bml",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+
+	"scopeName": "source.bml"
+}
